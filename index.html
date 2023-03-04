@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- fas -->
+	<script src="https://kit.fontawesome.com/dbe83c52a8.js" crossorigin="anonymous"></script>
+	<script>
+		function initMap () {
+			const uluru = { lat: 58.349451, lng: 26.714695 };
+			const map = new google.maps.Map(document.getElementById("map"), {
+				zoom: 16
+				center: uluru,
+			});
+			const marker = new google.maps.Marker({
+				position: uluru,
+				map: map,
+			})
+		}
+	</script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body id="home">
+	<!-- navbar -->
+	<nav id="navbar">
+		<h1>
+			<span class="text-primary"><i class="fa-solid fa-book-open"></i>FIR</span> MA
+		</h1>
+		<ul>
+			<li><a href="#home">Avaleht</li>
+			<li><a href="#what">Teenused</a></li>
+			<li><a href="#who">Meeskond</a></li>
+			<li><a href="#clients">Kliendid</a></li>
+			<li><a href="#contact">Kontakt</a></li>
+		</ul>
+	</nav>
+	<!-- header - showcase -->
+	<header id="showcase">
+		<div class="showcase-content">
+			<h1 class="l-heading">Lihtsalt Tee Midagi</h1>
+			<p class="par">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<a href="#what" class="btn btn-primary">Lohe Rohkem</a>
+		</div>
+	</header>
+	<!-- #what -->
+	<section id="what" class="bg-light">
+		<div class="container">
+			<h2 class="m-heading text-center py-1">Mida Me <span class="text-primary">Pakkume</span></h2>
+			<div class="items">
+				<div class="item text-center p-1">
+					<i class="fa-solid fa-pencil p-1"></i>
+					<div>
+						<h3>Kirjutame</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+				<div class="item text-center p-1">
+					<i class="fa-solid fa-wand-magic-sparkles p-1"></i>
+					<div>
+						<h3>Kujundame</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+				<div class="item text-center p-1">
+					<i class="fa-solid fa-hammer p-1"></i>
+					<div>
+						<h3>Silume</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- #who -->
+	<section id="who">
+		<!-- img -->
+		<div class="who-img"></div>
+		<!-- text content -->
+		<div class="bg-dark p-1">
+			<h2 class="m-heading">Kes <span class="text-primary">Me</span> Oleme</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<h3>Meie Meeskond</h3>
+			<ul>
+				<li>Kaval Ant: Projektijuht</li>
+				<li>Puna Mütsike: Arendusjuht</li>
+				<li>Lumi Valguke: Konsultant</li>
+				<li>Jõulu Vana: Arendaja</li>
+			</ul>
+		</div>
+	</section>
+	
+	<!-- #clients -->
+	<section id="clients">
+		<div class="bg-light py-1">
+			<h2 class="m-heading text-center">Meie <span class="text-primary">Kliendid</span></h2>
+			<div class="py-1 items">
+				<div><img src="imgs/logo1.png" alt="klient1"></div>
+				<div><img src="imgs/logo2.png" alt="klient2"></div>
+				<div><img src="imgs/logo3.png" alt="klient3"></div>
+				<div><img src="imgs/logo4.png" alt="klient4"></div>
+				<div><img src="imgs/logo5.png" alt="klient5"></div>
+			</div>
+		</div>
+	
+	<!-- #contact -->
+	<section id="contact">
+		<!-- form -->
+		<div class="p-1 bg-primary contact-form">
+			<h2 class="m-heading">Võta meiega ühendust</h2>
+			<p>Täida all olev vorm</p>
+			<form action="">
+				<div class="form-group">
+					<label for="name">Nimi</label>
+					<input type="text" id="name" placeholder="Sisesta oma nimi">
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" placeholder="Sisesta oma telefoni number">
+				</div>
+				<div class="form-group">
+					<label for="phone">Telefon</label>
+					<input type="phone" id="phone" placeholder="Sisesta oma telefoni number">
+				</div>
+				<div class="form-group">
+					<label for="message">Sõnum</label>
+					<textarea id="message" placeholder="Sisesta oma sõnum">
+					</textarea>
+				</div>
+				<input type="submit" value="Saada" vlass="btn btn-dark">
+			</form>
+		</div>
+		<!-- map -->
+		<div id="map" class="contact-map"></div>
+	</section>
+	
+	<!-- #footer -->
+	<footer id="footer" class="bg-dark text-center py-1">
+		<p>Kõik õigused on kaitsud &copy; 2022</p>
+	</footer>
+	<script async 
+	src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+	</script>
+</body>
+</html>
